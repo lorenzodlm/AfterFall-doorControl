@@ -37,8 +37,8 @@ void loop() {
   }
 }
 
-void openDoor() {
-  // UNLOCK DOOR
+void closeDoor() {
+  // LOCK DOOR
   digitalWrite(RELAY_PIN, LOW); 
   digitalWrite(LED_PIN, HIGH);
   
@@ -46,14 +46,14 @@ void openDoor() {
   matrix.stroke(0xFFFFFF); 
   matrix.textFont(Font_5x7);
   matrix.beginText(4, 1, 0xFFFFFF); 
-  matrix.println("O"); 
+  matrix.println("C"); 
   matrix.endText();
 
   Serial.println("Door Opened");
 }
 
-void closeDoor() {
-  // LOCK DOOR
+void openDoor() {
+  // UNLOCK DOOR
   digitalWrite(RELAY_PIN, HIGH);
   digitalWrite(LED_PIN, LOW);
 
@@ -61,7 +61,7 @@ void closeDoor() {
   matrix.stroke(0xFFFFFF);
   matrix.textScrollSpeed(90);
   matrix.beginText(4, 1, 0xFFFFFF);
-  matrix.println("C"); 
+  matrix.println("O"); 
   matrix.endText();
 
   Serial.println("Door Closed");
