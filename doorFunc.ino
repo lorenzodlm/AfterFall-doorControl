@@ -49,7 +49,7 @@ void closeDoor() {
   matrix.println("C"); 
   matrix.endText();
 
-  Serial.println("Door Opened");
+  Serial.println("Door Closed");
 }
 
 void openDoor() {
@@ -64,5 +64,5 @@ void openDoor() {
   matrix.println("O"); 
   matrix.endText();
 
-  Serial.println("Door Closed");
+  Serial.println("Door Opened");
 }
